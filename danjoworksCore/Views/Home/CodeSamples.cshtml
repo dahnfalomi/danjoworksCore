@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "CodeSamples";
+}
+
+<h1>Code Samples</h1>
+
+<ul class="list-group list-group-flush">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item codesamples-item"><a asp-area="" asp-controller="@item" asp-action="Index">@item</a></li>
+    }
+</ul>
