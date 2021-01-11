@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Code Sample - Weather";
+}
+
+<h1>Code Sample - Weather</h1>
+
+<div>
+    <div>
+        <h4 id="ipAdd"></h4>
+    </div>
+    <div>
+        <div><h4>Current Weather</h4></div>
+        <div class="mb-5" id="weather-widget">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" id="weather-card-title">Weather Forecast</h5>
+                    <h6 class="card-subtitle mb-2 text-muted weather-card-loc" id="weather-card-subtitle"></h6>
+                    <img class="weather-card-icon" />
+                    <p class="card-text weather-card-text"></p>
+                    <h4 class="weather-card-temp"></h4><span class="weather-card-unit">&#176;C</span>
+                    @*<a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h5>Browse Location</h5>
+        <form>
+            <div class="input-group">
+                <input type="text" id="inputLocation" placeholder="Enter a location" aria-label="Enter a location" aria-describedby="button-addon2" required>
+                <div class="input-group-append">
+                    <button type="submit" id="submitLocation" class="btn btn-outline-secondary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section ScriptsByPage {
+    <script src="~/js/Weather.js"></script>
+}

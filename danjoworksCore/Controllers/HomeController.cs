@@ -28,6 +28,17 @@ namespace danjoworksCore.Controllers
             return View();
         }
 
+        public IActionResult CodeSamples()
+        {
+            // Add a range of items  
+            string[] codeSamples = { "Weather", "Upload" };
+            List<string> sampleList = new List<string>();
+
+            sampleList.AddRange(codeSamples);
+
+            return View(sampleList);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
